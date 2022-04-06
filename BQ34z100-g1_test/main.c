@@ -18,8 +18,7 @@ typedef struct
         unsigned char nAddress;
 } TI2C;
 
-int gauge_read(void *pHandle, unsigned char nRegister, unsigned char *pData, unsigned char
-nLength)
+int gauge_read(void *pHandle, unsigned char nRegister, unsigned char *pData, unsigned char nLength)
 {
         TI2C *pI2C = (TI2C *) pHandle;
         int n;
@@ -36,8 +35,7 @@ nLength)
         return n;
 }
 
-int gauge_write(void *pHandle, unsigned char nRegister, unsigned char *pData, unsigned char
-nLength)
+int gauge_write(void *pHandle, unsigned char nRegister, unsigned char *pData, unsigned char nLength)
 {
         TI2C *pI2C = (TI2C *) pHandle;
         unsigned char pWriteData[nLength + 1];

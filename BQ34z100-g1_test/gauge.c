@@ -16,16 +16,16 @@
 //pData: pointer to a data buffer
 //nLength: number of bytes
 //return value: number of bytes read (0 if error)
-extern int gauge_read(void *pHandle, unsigned char nRegister, unsigned char *pData, unsigned char
-nLength);
-//gauge_read: write bytes to gauge (must be implemented for a specific system)
+extern int gauge_read(void *pHandle, unsigned char nRegister, unsigned char *pData, unsigned char nLength);
+
+//gauge_write: write bytes to gauge (must be implemented for a specific system)
 //pHandle: handle to communications adapater
 //nRegister: first register (=standard command) to write to
 //pData: pointer to a data buffer
 //nLength: number of bytes
 //return value: number of bytes written (0 if error)
-extern int gauge_write(void *pHandle, unsigned char nRegister, unsigned char *pData, unsigned
-char nLength);
+extern int gauge_write(void *pHandle, unsigned char nRegister, unsigned char *pData, unsigned char nLength);
+
 //gauge_address: set device address for gauge (must be implemented for a specific system; not
 //required for HDQ)
 //pHandle: handle to communications adapater
@@ -128,8 +128,7 @@ bool gauge_exit(void *pHandle, unsigned int nSubCmd)
 //nLength: length of data class (all blocks)
 //return value: 0 = success
 
-int gauge_read_data_class(void *pHandle, unsigned char nDataClass, unsigned char *pData, unsigned
-char nLength)
+int gauge_read_data_class(void *pHandle, unsigned char nDataClass, unsigned char *pData, unsigned char nLength)
 {
         unsigned char nRemainder = nLength;
         unsigned int nOffset = 0;
