@@ -1,0 +1,1 @@
+cmd_/home/bhagwat/bhagwatws/C_practice/LKM/3.major_number/modules.order := {   echo /home/bhagwat/bhagwatws/C_practice/LKM/3.major_number/major_number.ko; :; } | awk '!x[$$0]++' - > /home/bhagwat/bhagwatws/C_practice/LKM/3.major_number/modules.order

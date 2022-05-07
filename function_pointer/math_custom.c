@@ -32,4 +32,5 @@ float divide(float num1, float num2)
 void calculate(float num1,float num2, float (*math_fuction)(float,float))
 {
         printf("Result = %f\n",math_fuction(num1,num2));
+        printf("this is %pF",math_fuction);
 }

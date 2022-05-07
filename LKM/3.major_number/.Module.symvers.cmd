@@ -1,0 +1,1 @@
+cmd_/home/bhagwat/bhagwatws/C_practice/LKM/3.major_number/Module.symvers := sed 's/\.ko$$/\.o/' /home/bhagwat/bhagwatws/C_practice/LKM/3.major_number/modules.order | scripts/mod/modpost -m -a  -o /home/bhagwat/bhagwatws/C_practice/LKM/3.major_number/Module.symvers -e -i Module.symvers   -T -

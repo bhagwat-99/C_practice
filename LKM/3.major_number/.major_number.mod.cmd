@@ -1,0 +1,1 @@
+cmd_/home/bhagwat/bhagwatws/C_practice/LKM/3.major_number/major_number.mod := { echo  /home/bhagwat/bhagwatws/C_practice/LKM/3.major_number/major_number.o;  echo; } > /home/bhagwat/bhagwatws/C_practice/LKM/3.major_number/major_number.mod

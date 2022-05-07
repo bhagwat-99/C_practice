@@ -1,0 +1,15 @@
+# define LENGTH 3
+int result ;
+struct spi_ioc_transfer spi ;
+unsigned char data_out [ LENGTH ]={0 x1 ,0 x2 ,0 x3 };
+unsigned char data_in [ LENGTH ];
+/* Setup full - duplex transfer of 3 bytes */
+spi . tx_buf = ( unsigned long )& data_out ;
+spi . rx_buf = ( unsigned long )& data_in ;
+spi . len = LENGTH ;
+spi . delay_usecs = 0 ;
+spi . speed_hz = 100000 ;
+spi . bits_per_word = 8 ;
+spi . cs_change = 0 ;
+/* Run one full - duplex transaction */
+result = ioctl ( spi_fd , SPI_IOC_MESSAGE (1)) , & spi ) ;
