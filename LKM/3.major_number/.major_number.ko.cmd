@@ -1,1 +1,0 @@
-cmd_/home/bhagwat/bhagwatws/C_practice/LKM/3.major_number/major_number.ko := ld -r  -m elf_x86_64  --build-id=sha1  -T scripts/module.lds -o /home/bhagwat/bhagwatws/C_practice/LKM/3.major_number/major_number.ko /home/bhagwat/bhagwatws/C_practice/LKM/3.major_number/major_number.o /home/bhagwat/bhagwatws/C_practice/LKM/3.major_number/major_number.mod.o;  true
