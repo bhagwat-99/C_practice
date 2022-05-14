@@ -19,14 +19,14 @@ int read_file(char * filename, char * mode)
         // open file for write
         FILE *fptr_write;
 
-        fptr_write = fopen("weather","a");
+        fptr_write = fopen("weather.csv","a");
         if(fptr == NULL)
         {
                 printf("ERROR opening the file weather \n");
                 return -1;
         }
 
-        char ch;
+        int ch;
         while ((ch = fgetc(fptr)) != EOF)
                 if(ch == '\n')
                 {
@@ -65,7 +65,7 @@ int main()
         {
 
                 // open file for read
-                fptr = fopen("weather","a");
+                fptr = fopen("weather.csv","a");
                 if(fptr == NULL)
                 {
                         printf("ERROR opening the file weather\n");
@@ -83,7 +83,7 @@ int main()
                 
 
                 // read met file
-                filename = "met";
+                filename = "/tmp/met";
                 mode = "r";
                 if(read_file(filename, mode) == -1)
                 {
@@ -93,7 +93,7 @@ int main()
 
 
                 // read light intensity file
-                filename = "light_intensity";
+                filename = "/tmp/light_intensity";
                 mode = "r";
                 if(read_file(filename, mode) == -1)
                 {
@@ -101,7 +101,7 @@ int main()
                         return -1;
                 }
                
-                sleep(60);
+                sleep(10);
         }        
         return 0;
 }
