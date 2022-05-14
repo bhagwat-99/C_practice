@@ -101,7 +101,7 @@ int main()
                         return -1;
                 }
                
-                sleep(10);
+                sleep(60);
         }        
         return 0;
 }
