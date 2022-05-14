@@ -26,25 +26,17 @@ int read_file(char * filename, char * mode)
                 return -1;
         }
 
-        // // reading line by line, max 256 bytes
-        // const unsigned MAX_LENGTH = 256;
-        // char buffer[MAX_LENGTH];
-
-        // while (fgets(buffer, MAX_LENGTH, fptr))
-        //         printf("%s", buffer);
-        // printf("\n");
-
         char ch;
         while ((ch = fgetc(fptr)) != EOF)
-                //putchar(ch);
-                fputc(ch,fptr_write);
-
-        //printf("\n");
-        
-        // if(fprintf(fptr,"%d",i ) < 0 )
-        // {   
-        //         printf("error writing to file \n");    
-        // }
+                if(ch == '\n')
+                {
+                        ch = ' ';
+                        fputc(ch,fptr_write);
+                }
+                else
+                {
+                        fputc(ch,fptr_write);
+                }
 
         if(fclose(fptr) == EOF)
         {
@@ -84,9 +76,9 @@ int main()
                 ts = *localtime ( &now );
                 strftime(buf, sizeof(buf), "%a %Y-%m-%d %H:%M:%S %Z", &ts);
                 //fprintf("%s   ", buf);
-                fprintf(fptr,"%s  ", buf);
-
+                fprintf(fptr,"\n%s  ", buf);
                 fclose(fptr);
+                
                 
                 
 
@@ -108,6 +100,7 @@ int main()
                         printf("error read file\n");
                         return -1;
                 }
+               
                 sleep(10);
         }        
         return 0;
