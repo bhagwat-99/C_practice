@@ -3,6 +3,9 @@
 #include <unistd.h>
 #include <time.h>
 
+#define MET_RAM_FILE_PATH "var/tmp/met"
+#define LIGHT_RAM_FILE_PATH "var/tmp/light_intensity"
+#define MODE "r"
 
 time_t now;
 struct tm ts;
@@ -15,7 +18,7 @@ float read_humidity()
         char line[80];
 
 
-        fptr = fopen("/tmp/met","r");
+        fptr = fopen(MET_RAM_FILE_PATH,MODE);
         if(fptr == NULL)
         {
                 printf("ERROR opening the file met\n");
@@ -37,7 +40,7 @@ float read_temp_c()
         char line[80];
 
 
-        fptr = fopen("/tmp/met","r");
+        fptr = fopen(MET_RAM_FILE_PATH,MODE);
         if(fptr == NULL)
         {
                 printf("ERROR opening the file met\n");
@@ -67,7 +70,7 @@ float read_temp_f()
         char line[80];
 
 
-        fptr = fopen("/tmp/met","r");
+        fptr = fopen(MET_RAM_FILE_PATH,MODE);
         if(fptr == NULL)
         {
                 printf("ERROR opening the file met\n");
@@ -105,7 +108,7 @@ float light_intensity()
         char line[80];
 
 
-        fptr = fopen("/tmp/light_intensity","r");
+        fptr = fopen(LIGHT_RAM_FILE_PATH,MODE);
         if(fptr == NULL)
         {
                 printf("ERROR opening the file met\n");
