@@ -3,8 +3,8 @@
 #include <unistd.h>
 #include <time.h>
 
-#define MET_RAM_FILE_PATH "var/tmp/met"
-#define LIGHT_RAM_FILE_PATH "var/tmp/light_intensity"
+#define MET_RAM_FILE_PATH "/tmp/met"
+#define LIGHT_RAM_FILE_PATH "/tmp/light_intensity"
 #define MODE "r"
 
 time_t now;
