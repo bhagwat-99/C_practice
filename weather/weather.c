@@ -99,12 +99,14 @@ float read_met_data()
         if(file == NULL)
         {       printf("can not open file %s\n",filename);
                 //exit(1);
+                return 1;
         }
 
         if(fscanf(file,MET_FILE_FORMAT, temp_data1, temp_data2, temp_data3) == EOF)
         {
                 printf("Error reading file %s\n",filename);
                 //exit(1);
+                return 1;
         }
         humidity = atof(temp_data1);
         temp_c = atof(temp_data2);
@@ -125,13 +127,13 @@ float read_gps_data()
         file = fopen(filename, "r");
         if(file == NULL)
         {       printf("can not open file %s\n",filename);
-                //exit(1);
+                return 1;
         }
 
         if(fscanf(file,GPS_FILE_FORMAT, gps_time, gps_state, gps_status,latitude,longitude,altitude,satellites) == EOF)
         {
                 printf("Error reading file %s\n",filename);
-                //exit(1);
+                return 1;
         }
 
 
@@ -149,12 +151,14 @@ float read_light_data()
         if(file == NULL)
         {       printf("can not open file %s\n",filename);
                 //exit(1);
+                return 1;
         }
 
         if(fscanf(file,LIGHT_FILE_FORMAT, temp_data1) == EOF)
         {
                 printf("Error reading file %s\n",filename);
                 //exit(1);
+                return 1;
         }
         Lux = atof(temp_data1);
 
