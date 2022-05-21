@@ -26,7 +26,7 @@ char time_str[30];
 char *csv_filename;
 
 float temp_c = 0,temp_f = 0,humidity = 0,Lux = 0;
-char latitude[20] = {0},longitude[20]={0},gps_state[20]={0},gps_status[20]={0},altitude[20]={0},satellites[20]={0},gps_time[20]={0};
+char latitude[20] = "NA",longitude[20]="NA",gps_state[20]="NA",gps_status[20]="NA",altitude[20]="NA",satellites[20]="NA",gps_time[20]="NA";
 
 
 void serial_id()
