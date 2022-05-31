@@ -33,4 +33,5 @@ do
       exit 0
    fi
    echo There are files in upload directory
+   sleep 60
 done
