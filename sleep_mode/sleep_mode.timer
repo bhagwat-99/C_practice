@@ -1,0 +1,9 @@
+[Unit]
+Description=sleep mode service timer
+
+[Timer]
+OnCalendar=*-*-* 22:00:00
+Unit=sleep_mode.service
+
+[Install]
+WantedBy=multi-user.target

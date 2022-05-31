@@ -2,7 +2,6 @@
 Description=low power mode service
 
 [Service]
-Type=oneshot
 ExecStart=/usr/sbin/sleep_mode/sleep_mode.sh
 
 [Install]

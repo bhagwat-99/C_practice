@@ -1,7 +1,7 @@
 #!/bin/bash
 # ------------------------------------------------------
 
-source sleep_mode.conf
+source /etc/entomologist/sleep_mode.conf
 
 # Argument check
 #if [ $# -lt 1 ]; then
