@@ -1,6 +1,4 @@
 #!/bin/bash
-count=0
-previous_count=0
 
 while true
 do
@@ -35,12 +33,5 @@ do
       exit 0
    fi
    echo There are files in upload directory
-   previous_count=$count
-   sleep 300
-   count=$(ls /media/mmcblk1p1/upload | wc -l)
-   if [ $count -eq $previous_count ]
-   then
-      echo exiting sleep_mode.sh without suspending. there are files in upload directory
-      exit 0
-   fi
+   sleep 60
 done

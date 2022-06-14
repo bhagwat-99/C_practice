@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/bhagwat/bhagwatws/C_practice'
+make: Leaving directory '/home/bhagwat/bhagwatws/C_practice'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
